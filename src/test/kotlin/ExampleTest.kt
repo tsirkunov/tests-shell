@@ -53,5 +53,4 @@ class ExampleTest {
             response.statusLine.statusCode, equalTo(200)
         )
     }
-
 }
