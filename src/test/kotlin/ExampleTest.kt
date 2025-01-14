@@ -53,4 +53,17 @@ class ExampleTest {
             response.statusLine.statusCode, equalTo(200)
         )
     }
+
+    @Test
+    fun simpleHttpTest1() {
+        val request = RequestBuilder.create("GET")
+            .setUri("https://httpbin.org/get")
+            .build()
+        val response = httpClient.execute(request)
+
+        assertThat(
+            "проверяем статус ответа",
+            response.statusLine.statusCode, equalTo(200)
+        )
+    }
 }
